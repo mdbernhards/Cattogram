@@ -1,0 +1,6 @@
+@Cattogram.Server_HostAddress = http://localhost:5169
+
+GET {{Cattogram.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
