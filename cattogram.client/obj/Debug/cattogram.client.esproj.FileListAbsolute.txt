@@ -1,1 +1,0 @@
-C:\NetProjects\Cattogram\cattogram.client\obj\Debug\cattogram.client.esproj.CoreCompileInputs.cache
