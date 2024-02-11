@@ -2,10 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
 {
-    public class Roles
+    public class LikeType
     {
         [Key]
-        public int RoleId { get; set; }
+        public int LikeTypeId { get; set; }
 
         [MaxLength(100)]
         public string? Name { get; set; }

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
 {
-    public class Followers
+    public class Follower
     {
         [Key]
         public int FollowId { get; set; }

@@ -1,3 +1,4 @@
+using Cattogram.Server.Database.Logic;
 using Cattogram.Server.Database.Models;
 using DotnetWebApiWithEFCodeFirst.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -6,22 +7,23 @@ namespace Cattogram.Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController(CattoDBContext context) : ControllerBase
+    public class UserController(CattoDBContext context, UserQueryLogic userQueryLogic) : ControllerBase
     {
         private readonly CattoDBContext _context = context;
+        private readonly UserQueryLogic _userQueryLogic = userQueryLogic;
 
         // GET: api/Users
         [HttpGet]
-        public ActionResult<IEnumerable<Users>> GetUsers()
+        public ActionResult<IEnumerable<User>> GetUsers()
         {
-            return _context.Users.ToList();
+            return _userQueryLogic.GetUsers();
         }
 
         // GET: api/Users/1
         [HttpGet("{id}")]
-        public ActionResult<Users> GetUser(int id)
+        public ActionResult<User> GetUser(int id)
         {
-            var user = _context.Users.Find(id);
+            var user = _userQueryLogic.GetUser(id);
             if (user == null)
             {
                 return NotFound();
@@ -31,14 +33,13 @@ namespace Cattogram.Server.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public ActionResult<Users> CreateUsers(Users user)
+        public ActionResult<User> CreateUser(User user)
         {
             if (user == null)
             {
                 return BadRequest();
             }
-            _context.Users.Add(user);
-            _context.SaveChanges();
+            _userQueryLogic.CreateUser(user);
             return CreatedAtAction(nameof(GetUser), new { id = user.UserId }, user);
         }
     }

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
 {
-    public class Users
+    public class User
     {
         [Key]
         public int UserId { get; set; }

@@ -2,19 +2,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
 {
-    public class Photos
+    public class Post
     {
         [Key]
-        public int PhotoId { get; set; }
+        public int PostId { get; set; }
 
         [Required]
-        public int PostId { get; set; }
+        public int UserId { get; set; }
 
         [MaxLength(100)]
         public string? Title { get; set; }
 
         [MaxLength(1000)]
-        public string? PhotoURL { get; set; }
+        public string? Text { get; set; }
 
         [Required]
         public DateTime CreatedAt { get; set; }

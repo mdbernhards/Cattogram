@@ -2,16 +2,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
 {
-    public class Posts
+    public class Comment
     {
         [Key]
-        public int PostId { get; set; }
+        public int CommentId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public int CommenterId { get; set; }
 
-        [MaxLength(100)]
-        public string? Title { get; set; }
+        [Required]
+        public int PostId { get; set; }
 
         [MaxLength(1000)]
         public string? Text { get; set; }
