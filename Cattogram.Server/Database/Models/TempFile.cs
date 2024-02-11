@@ -1,8 +1,3 @@
-
-using DotnetWebApiWithEFCodeFirst.Models;
-using Microsoft.Extensions.Hosting;
-using System.Xml.Linq;
-
 //Table users
 //{
 //    id integer [primary key]
@@ -84,4 +79,3 @@ using System.Xml.Linq;
 //Ref: likes.post_id > posts.id
 
 //Ref: likes.like_type_id > like_types.id
-

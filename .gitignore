@@ -2,6 +2,40 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+.DS_Store
+
+# dotnet core
+bin/
+obj/
+project.lock.json
+NuGetScratch/
+
+api/wwwroot/**
+!api/wwwroot/scratch.html
+!api/wwwroot/favicon.ico
+
+# node
+node_modules/
+typings/
+npm-debug.log
+
+# client-react
+client-react/components/*.js
+client-react.test/build
+!client-react.test/build/client-react/styles/
+
+# ops
+ops/hosts
+ops/config.yml
+ops/*.retry
+
+# other
+*.js.map
+
+# IDE
+.idea/
+.vs/
+
 /.vs/Cattogram/DesignTimeBuild/.dtbcache.v2
 /.vs/Cattogram/FileContentIndex/03424151-48d1-49fb-8045-235739e690f2.vsidx
 /.vs/Cattogram/FileContentIndex/8047ba9f-0dcf-4d2e-9034-b2dba9fd8893.vsidx
@@ -17,3 +51,25 @@
 /Cattogram.Server/obj/Cattogram.Server.csproj.nuget.g.targets
 /Cattogram.Server/obj/project.assets.json
 /Cattogram.Server/obj/project.nuget.cache
+/.vs/Cattogram/FileContentIndex
+/.vs/Cattogram/v17/.suo
+/Cattogram.Database/obj/Debug
+/Cattogram.Server/bin/Debug/net8.0/runtimes
+/Cattogram.Server/obj/Debug/net8.0/ref/Cattogram.Server.dll
+/Cattogram.Server/obj/Debug/net8.0/apphost.exe
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.csproj.CoreCompileInputs.cache
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.csproj.FileListAbsolute.txt
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.dll
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.GeneratedMSBuildEditorConfig.editorconfig
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.genruntimeconfig.cache
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.pdb
+/Cattogram.Server/obj/Debug/net8.0/refint/Cattogram.Server.dll
+/Cattogram.Server/bin/Debug/net8.0/appsettings.json
+/Cattogram.Server/bin/Debug/net8.0/Cattogram.Server.deps.json
+/Cattogram.Server/bin/Debug/net8.0/Cattogram.Server.dll
+/Cattogram.Server/bin/Debug/net8.0/Cattogram.Server.exe
+/Cattogram.Server/bin/Debug/net8.0/Cattogram.Server.pdb
+/Cattogram.Server/bin/Debug/net8.0/Cattogram.Server.runtimeconfig.json
+/Cattogram.Server/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/Cattogram.Server/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Cattogram.Server/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll

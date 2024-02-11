@@ -1,5 +1,3 @@
-// Models/LikeTypes.cs
-
 using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
@@ -8,14 +6,17 @@ namespace Cattogram.Server.Database.Models
     {
         [Key]
         public int LikeTypeId { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Name { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Description { get; set; }
-        [Required]
+
         [MaxLength(100)]
-        public TimestampAttribute CreatedAt { get; set; }
+        public string? Name { get; set; }
+
+        [MaxLength(250)]
+        public string? Description { get; set; }
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+        [Required]
+        public DateTime EditedAt { get; set; }
     }
 }

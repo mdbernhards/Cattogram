@@ -1,5 +1,3 @@
-// Models/Posts.cs
-
 using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
@@ -8,16 +6,20 @@ namespace Cattogram.Server.Database.Models
     {
         [Key]
         public int PostId { get; set; }
+
         [Required]
         public int UserId { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Title { get; set; }
-        [Required]
-        [MaxLength(1000)]
-        public string Text { get; set; }
-        [Required]
+
         [MaxLength(100)]
-        public TimestampAttribute CreatedAt { get; set; }
+        public string? Title { get; set; }
+
+        [MaxLength(1000)]
+        public string? Text { get; set; }
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+        [Required]
+        public DateTime EditedAt { get; set; }
     }
 }

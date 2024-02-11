@@ -1,8 +1,4 @@
-// Models/Users.cs
-
-using Microsoft.Extensions.Hosting;
 using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 
 namespace Cattogram.Server.Database.Models
 {
@@ -10,30 +6,33 @@ namespace Cattogram.Server.Database.Models
     {
         [Key]
         public int UserId { get; set; }
+
         [Required]
         [MaxLength(50)]
-        public string Username { get; set; }
-        [Required]
+        public string? Username { get; set; }
+
         [MaxLength(50)]
-        public string FirstName { get; set; }
-        [Required]
+        public string? FirstName { get; set; }
+
         [MaxLength(50)]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
+
+        public DateOnly BirthDate { get; set; }
+
+        [MaxLength(150)]
+        public string? Email { get; set; }
+
         [Required]
-        [MaxLength(100)]
-        public string Email { get; set; }
+        [MaxLength(250)]
+        public string? PasswordHash { get; set; }
+
         [Required]
-        [MaxLength(100)]
-        public string PasswordHash { get; set; }
+        public int RoleId { get; set; }
+
         [Required]
-        [MaxLength(100)]
-        public string Role { get; set; }
+        public DateTime CreatedAt { get; set; }
+
         [Required]
-        [MaxLength(100)]
-        public TimestampAttribute CreatedAt { get; set; }
+        public DateTime EditedAt { get; set; }
     }
 }
-
-
-
-

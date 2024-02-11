@@ -1,5 +1,3 @@
-// Models/Comments.cs
-
 using System.ComponentModel.DataAnnotations;
 
 namespace Cattogram.Server.Database.Models
@@ -8,15 +6,20 @@ namespace Cattogram.Server.Database.Models
     {
         [Key]
         public int CommentId { get; set; }
+
         [Required]
         public int CommenterId { get; set; }
+
         [Required]
         public int PostId { get; set; }
+
+        [MaxLength(1000)]
+        public string? Text { get; set; }
+
         [Required]
-        [MaxLength(50)]
-        public string Text { get; set; }
+        public DateTime CreatedAt { get; set; }
+
         [Required]
-        [MaxLength(100)]
-        public TimestampAttribute CreatedAt { get; set; }
+        public DateTime EditedAt { get; set; }
     }
 }

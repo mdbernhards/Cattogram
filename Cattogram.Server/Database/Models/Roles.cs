@@ -1,8 +1,4 @@
-// Models/Roles.cs
-
-using Microsoft.Extensions.Hosting;
 using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 
 namespace Cattogram.Server.Database.Models
 {
@@ -10,15 +6,17 @@ namespace Cattogram.Server.Database.Models
     {
         [Key]
         public int RoleId { get; set; }
-        [Required]
-        [MaxLength(50)]
-        public string Name { get; set; }
-        [Required]
+
+        [MaxLength(100)]
+        public string? Name { get; set; }
+
         [MaxLength(250)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+        [Required]
+        public DateTime EditedAt { get; set; }
     }
 }
-
-
-
-
