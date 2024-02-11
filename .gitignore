@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Cattogram/DesignTimeBuild/.dtbcache.v2
+/.vs/Cattogram/FileContentIndex/03424151-48d1-49fb-8045-235739e690f2.vsidx
+/.vs/Cattogram/FileContentIndex/8047ba9f-0dcf-4d2e-9034-b2dba9fd8893.vsidx
+/.vs/Cattogram/FileContentIndex/d46f9cec-f597-43b8-a15b-bb3031b25088.vsidx
+/.vs/Cattogram/FileContentIndex/e5207e6c-781c-4788-9dcf-4d2234383aed.vsidx
+/.vs/Cattogram/FileContentIndex/e6c065be-5e88-4cf0-bbfb-e3c34f691cff.vsidx
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.AssemblyInfo.cs
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.AssemblyInfoInputs.cache
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.assets.cache
+/Cattogram.Server/obj/Debug/net8.0/Cattogram.Server.csproj.AssemblyReference.cache
+/Cattogram.Server/obj/Cattogram.Server.csproj.nuget.dgspec.json
+/Cattogram.Server/obj/Cattogram.Server.csproj.nuget.g.props
+/Cattogram.Server/obj/Cattogram.Server.csproj.nuget.g.targets
+/Cattogram.Server/obj/project.assets.json
+/Cattogram.Server/obj/project.nuget.cache
