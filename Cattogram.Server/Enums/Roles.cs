@@ -1,6 +1,6 @@
 namespace Cattogram.Server.Database.Enums
 {
-    enum Roles
+    public enum Roles
     {
         // User role
         User = 0,
